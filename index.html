@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VD6QY04VBD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VD6QY04VBD');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVE Blueprint - Bangun Aset Digital Pertamamu</title>
+    
+    <!-- Link ke Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS via CDN (Untuk Utility Classes Layout) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Konfigurasi Warna Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#2563eb', // Primary Blue
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b', // Gold/Amber
+                            600: '#d97706',
+                            red: '#ef4444', // Urgency Red
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <!--<div class="bg-brand-900 text-white p-1 rounded font-bold text-sm">S</div>-->
+                    <span class="font-bold text-xl tracking-tight text-brand-900">SAVE Blueprint</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#why" class="text-slate-600 hover:text-brand-600 text-sm font-medium transition">Kenapa SAVE?</a>
+                    <a href="#system" class="text-slate-600 hover:text-brand-600 text-sm font-medium transition">Sistem</a>
+                    <a href="#faq" class="text-slate-600 hover:text-brand-600 text-sm font-medium transition">FAQ</a>
+                </div>
+                <div>
+                    <a href="#pricing" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-brand-600/20 flex items-center gap-2">
+                        Daftar Batch 1
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 0: HERO -->
+    <header class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-brand-50 to-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            
+            <!-- DYNAMIC COUNTDOWN TIMER -->
+            <div class="mb-8 flex flex-col items-center justify-center">
+                <p id="countdown-label" class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-3">Batch 1 Dibuka Dalam:</p>
+                <div id="countdown-container" class="flex flex-wrap justify-center gap-3 md:gap-4 text-slate-800">
+                    <div class="countdown-box flex flex-col items-center p-3 rounded-xl min-w-[70px] shadow-sm">
+                        <span class="text-2xl md:text-3xl font-bold font-mono text-brand-900" id="days">00</span>
+                        <span class="text-[10px] uppercase font-semibold text-slate-500">Hari</span>
+                    </div>
+                    <div class="countdown-box flex flex-col items-center p-3 rounded-xl min-w-[70px] shadow-sm">
+                        <span class="text-2xl md:text-3xl font-bold font-mono text-brand-900" id="hours">00</span>
+                        <span class="text-[10px] uppercase font-semibold text-slate-500">Jam</span>
+                    </div>
+                    <div class="countdown-box flex flex-col items-center p-3 rounded-xl min-w-[70px] shadow-sm">
+                        <span class="text-2xl md:text-3xl font-bold font-mono text-brand-900" id="minutes">00</span>
+                        <span class="text-[10px] uppercase font-semibold text-slate-500">Menit</span>
+                    </div>
+                    <div class="countdown-box flex flex-col items-center p-3 rounded-xl min-w-[70px] shadow-sm bg-white border-brand-200">
+                        <span class="text-2xl md:text-3xl font-bold font-mono text-accent-red" id="seconds">00</span>
+                        <span class="text-[10px] uppercase font-semibold text-slate-500">Detik</span>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                Bangun aset digital pertama dari <span class="text-gradient">skill yang sudah kamu punya.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Realistis. Terarah. Anti-burnout. Sistem blueprint untuk mengubah keahlianmu menjadi produk tanpa meninggalkan pekerjaan utama.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <div class="w-full sm:w-96 flex flex-col gap-3">
+                    <a href="#pricing" class="w-full bg-brand-600 hover:bg-brand-700 text-white text-lg px-8 py-4 rounded-xl font-bold transition transform hover:-translate-y-1 shadow-xl shadow-brand-600/30 flex items-center justify-center gap-2">
+                        Daftar Founding User
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <br>
+                    <!-- ENHANCED HERO SLOT COUNTER -->
+                    <div class="bg-white/80 backdrop-blur-sm p-3 rounded-lg border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between text-xs font-bold mb-1.5">
+                            <span class="text-slate-600">🔥 Slot Terjual: <span class="text-brand-700">0%</span></span>
+                            <!--<span class="text-accent-red animate-pulse-fast">Sisa 100 Slot!</span>-->
+                            <span class="text-accent-red animate-pulse-fast">BELUM DIMULAI</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-3.5 overflow-hidden border border-slate-300 shadow-inner">
+                            <div class="bg-gradient-to-r from-accent-400 to-accent-500 h-full rounded-full progress-striped relative" style="width: 0%">
+                                <div class="absolute right-0 top-0 bottom-0 w-1 bg-white/30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ENHANCED HERO BONUS HIGHLIGHT -->
+            <div class="mt-12 flex justify-center">
+                <div class="inline-flex items-center gap-4 px-5 py-3 bg-amber-50 border border-amber-200 rounded-2xl shadow-sm bg-white/50 backdrop-blur-sm">
+                    <div class="flex-shrink-0 bg-amber-100 text-amber-600 p-2 rounded-full">
+                        <i data-lucide="gift" class="w-6 h-6"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-xs font-bold text-amber-700 uppercase tracking-wide">Bonus Eksklusif Batch 1</p>
+                        <p class="text-slate-800 font-semibold">15 Mini-Case Simulasi SAVE lintas profesi menggunakan 5 Model AI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decor element -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-30 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-brand-200 rounded-full blur-3xl mix-blend-multiply"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-100 rounded-full blur-3xl mix-blend-multiply"></div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: KENAPA SAVE ADA -->
+    <section id="why" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-12 shadow-sm">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Mayoritas orang sebenarnya sudah punya skill bagus.</h2>
+                <div class="prose prose-lg text-slate-600">
+                    <p class="mb-4">
+                        Masalahnya bukan pada skill kamu. Masalahnya adalah <strong>skill itu tidak diarahkan ke tempat yang tepat.</strong>
+                    </p>
+                    <p class="mb-6">
+                        Tanpa arah yang jelas, kita mudah terjebak dalam siklus:
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Salah entry (membuat produk yang salah)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Salah audiens (menjual ke orang yang tidak butuh)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Burnout cepat karena hasil nihil</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Mental drop merasa "nggak punya progress"</span>
+                        </li>
+                    </ul>
+                    <div class="bg-brand-50 border-l-4 border-brand-600 p-4 rounded-r-lg">
+                        <p class="font-medium text-brand-900 italic">
+                            “Skill solves everything… if you know where it goes.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: SAVE SYSTEM -->
+    <section id="system" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sistem 4 Langkah SAVE</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Kerangka kerja yang dirancang khusus untuk karyawan, orang yang bingung arah, dan pemilik skill yang ingin hasil tanpa burnout.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- S -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-500 transition group">
+                    <div class="w-12 h-12 bg-brand-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-600 transition">
+                        <span class="text-2xl font-bold">S</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Skill</h3>
+                    <p class="text-slate-400 text-sm">Melihat kembali skill mana yang paling layak dijual dan dimiliki saat ini.</p>
+                </div>
+                
+                <!-- A -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-500 transition group">
+                    <div class="w-12 h-12 bg-brand-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-600 transition">
+                        <span class="text-2xl font-bold">A</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Audience</h3>
+                    <p class="text-slate-400 text-sm">Menentukan siapa persona spesifik yang paling tepat untuk kamu bantu.</p>
+                </div>
+
+                <!-- V -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-500 transition group">
+                    <div class="w-12 h-12 bg-brand-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-600 transition">
+                        <span class="text-2xl font-bold">V</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Value</h3>
+                    <p class="text-slate-400 text-sm">Merumuskan manfaat nyata yang dicari orang, bukan sekadar fitur.</p>
+                </div>
+
+                <!-- E -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-500 transition group">
+                    <div class="w-12 h-12 bg-brand-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-600 transition">
+                        <span class="text-2xl font-bold">E</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Entry</h3>
+                    <p class="text-slate-400 text-sm">Membuat entry point sederhana yang bisa diuji cepat di pasar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: HASIL -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <!--<div class="md:w-1/2">
+                <img src="https://placehold.co/600x600/f1f5f9/1e293b?text=Progress+Chart" alt="Grafik Progress" class="rounded-2xl shadow-2xl">
+            </div>-->
+            <div class="w-full">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Bukan Motivasi. Ini Sistem yang Bisa Diulang.</h2>
+                <p class="text-slate-600 mb-6">Setelah mempelajari SAVE Blueprint, kamu akan:</p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                        <span class="text-slate-700">Tahu skill mana yang punya nilai jual tinggi</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                        <span class="text-slate-700">Mengerti siapa yang paling membutuhkan bantuanmu</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                        <span class="text-slate-700">Punya draft entry point relevan yang siap diuji</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                        <span class="text-slate-700">Hemat 6–12 bulan trial & error</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 & 5: OFFER & PRICING -->
+    <section id="pricing" class="py-24 bg-brand-50 relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+                <div class="grid md:grid-cols-2">
+                    <!-- What you get -->
+                    <div class="p-8 md:p-10 bg-slate-50">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6 uppercase tracking-wider">Apa yang kamu dapatkan</h3>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                <i data-lucide="book" class="w-5 h-5 text-brand-600"></i>
+                                SAVE Blueprint eBook (Full)
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                <i data-lucide="compass" class="w-5 h-5 text-brand-600"></i>
+                                Sistem S-A-V-E Lengkap
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                <i data-lucide="file-text" class="w-5 h-5 text-brand-600"></i>
+                                Template Entry-Point
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                <i data-lucide="book-open" class="w-5 h-5 text-brand-600"></i>
+                                Mini-guide: 5 Produk Digital Skill Kantoran
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                <i data-lucide="layout" class="w-5 h-5 text-brand-600"></i>
+                                SAVE Canvas (.PDF + Google Sheets)
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                <i data-lucide="refresh-ccw" class="w-5 h-5 text-brand-600"></i>
+                                Minor Update Selamanya (v1.x)
+                            </li>
+                        </ul>
+
+                        <!-- ENHANCED BONUS BOX -->
+                        <div class="bg-amber-50 border-2 border-dashed border-amber-300 p-5 rounded-xl shadow-sm relative overflow-hidden">
+                            <!-- Ribbon Glow Effect from CSS -->
+                            <div class="bonus-ribbon-glow"></div>
+                            
+                            <h4 class="text-amber-800 font-bold text-sm mb-2 flex items-center gap-2 relative z-10">
+                                <i data-lucide="gift" class="w-5 h-5 text-amber-600"></i>
+                                BONUS KHUSUS BATCH 1
+                            </h4>
+                            <p class="text-slate-800 text-lg font-bold mb-1 relative z-10">15 Mini-Case Simulasi SAVE</p>
+                            <p class="text-slate-600 text-xs leading-relaxed relative z-10">Ringkasan hasil simulasi sistem ke 5 persona × 3 iterasi menggunakan 5 Model AI. <span class="text-amber-700 font-bold italic">Tidak dijual terpisah.</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Pricing & Slot Counter -->
+                    <div class="p-8 md:p-10 flex flex-col justify-center text-center bg-white relative">
+                        <!-- Ribbon -->
+                        <div class="absolute top-0 right-0 bg-accent-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
+                            BEST VALUE
+                        </div>
+
+                        <h3 class="text-slate-500 font-medium mb-2">Founding User Batch 1</h3>
+                        <div class="flex items-center justify-center gap-3 mb-1">
+                            <span class="text-slate-400 text-lg line-through decoration-red-500">Rp 249.000</span>
+                        </div>
+                        <div class="text-5xl font-extrabold text-slate-900 mb-4">
+                            189K
+                        </div>
+                        <p class="text-slate-500 text-sm mb-8">Harga akan naik seiring update versi & testimoni.</p>
+
+                        <!-- ENHANCED SLOT COUNTER WIDGET -->
+                        <div class="mb-6 text-left bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-inner">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-xs font-bold text-slate-600 uppercase">⚡ Ketersediaan Slot</span>
+                                <span class="text-xs font-bold text-accent-red">Tersisa 100 dari 100</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-4 overflow-hidden border border-slate-300">
+                                <div class="bg-gradient-to-r from-accent-400 to-accent-500 h-full rounded-full progress-striped relative flex items-center justify-end pr-2" style="width: 0%">
+                                </div>
+                            </div>
+                            <!--<p class="text-[10px] text-slate-400 mt-2 text-center italic">Slot berkurang cepat hari ini.</p>-->
+
+                            <p class="text-[10px] text-slate-500 mt-2 text-center italic text-accent-red animate-pulse-fast">Belum dimulai.</p>
+                        </div>
+
+                        <button onclick="alert('Tersedia mulai tanggal 10 Desember 2025')" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-200 transition transform hover:-translate-y-1 mb-4">
+                            Ambil Slot Batch 1
+                        </button>
+                        
+                        <div class="text-sm text-slate-400 space-y-1">
+                            <p><br>📅 Tersedia hanya 10 hari,<br> mulai 10 Desember 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGAL DISCLAIMER -->
+            <div class="max-w-3xl mx-auto mt-12 text-center">
+                <p class="text-sm text-slate-400 leading-relaxed max-w-2xl mx-auto border-t border-brand-100 pt-6">
+                    Sistem SAVE, metode, dan seluruh konten di dalam produk ini 
+                    merupakan karya orisinal yang dilindungi oleh Hak Cipta. 
+                    Dilarang menyebarkan atau memodifikasi tanpa izin.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: LEAD MAGNET (The Downsell) -->
+    <section id="lead-magnet" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            
+            <!-- Soft Headline -->
+            <h2 class="text-xl md:text-2xl font-semibold text-slate-700 mb-4">
+                Belum siap mengambil SAVE Blueprint?
+            </h2>
+            <p class="text-slate-500 mb-10">
+                Tidak masalah. Mulai dari langkah yang paling aman dulu.
+            </p>
+
+            <!-- Lead Magnet Card -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col md:flex-row items-center gap-8 text-left max-w-2xl mx-auto">
+                <!-- Mockup Image -->
+
+<div class="w-32 h-40 md:w-40 md:h-52 rounded-lg overflow-hidden border border-slate-200 shadow-inner">
+    <img 
+        src="assets/clarity-guide.png"
+        alt="SAVE Clarity Guide"
+        class="w-full h-full object-cover"
+    >
+</div>
+
+                <!--<div class="w-32 h-40 md:w-40 md:h-52 bg-slate-100 rounded-lg flex-shrink-0 flex items-center justify-center border border-slate-200 shadow-inner">
+                    <div class="text-center p-2">
+                        <i data-lucide="file-text" class="w-8 h-8 text-slate-400 mx-auto mb-2"></i><a href=https://drive.google.com/file/d/1WHyQF7DztdEy9tU9tassmHJMVdq_tsfV/view?usp=sharing></a>
+                        <span class="text-xs font-bold text-slate-400 block">SAVE</span>
+                        <span class="text-xs font-bold text-slate-600 block">Clarity Guide</span>
+                    </div>
+                </div>-->
+
+                <!-- Content -->
+                <div class="flex-1">
+                    <div class="inline-block bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded mb-2">GRATIS – Tersedia 25 November 2025</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">SAVE Clarity Guide</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        Panduan 15 halaman untuk melihat skillmu lebih jernih, mengenali audience potensial, dan mengurangi rasa bingung sebelum membuat entry.
+                    </p>
+
+                    
+                    
+                    <!-- Secondary CTA -->
+                    <button onclick="alert('Tersedia mulai tanggal 25 November 2025')" class="inline-flex items-center gap-2 px-6 py-2.5 bg-white border-2 border-slate-200 hover:border-brand-600 text-slate-700 hover:text-brand-600 rounded-lg font-semibold transition duration-200">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        Download Gratis
+                    </button>
+                </div>
+            </div>
+
+            <!-- Why Clarity Guide Exists -->
+            <div class="mt-12 max-w-xl mx-auto">
+                <p class="text-md text-slate-500 italic">
+                    "Clarity Guide membantu kamu memahami modal yang sudah kamu punya, sebelum masuk ke sistem lengkap SAVE Blueprint."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">FAQ</h2>
+                <p class="text-slate-500 mt-2">Pertanyaan yang paling sering diajukan.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                        <span>SAVE Blueprint itu apa?</span>
+                        <span class="transition accordion-icon">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Sistem 4 langkah (Skill → Audience → Value → Entry) untuk membantumu membangun entry digital pertama dari skill yang sudah kamu punya.
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                        <span>SAVE cocok untuk siapa?</span>
+                        <span class="transition accordion-icon">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Untuk kamu yang:
+                        <ul class="list-disc list-inside mt-2 space-y-1 pl-2">
+                            <li>Punya skill tapi bingung arahnya</li>
+                            <li>Ingin menghasilkan dari skill yang sudah ada</li>
+                            <li>Bekerja full-time & waktu luangnya terbatas</li>
+                            <li>Butuh arah sebelum membuat entry atau produk</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                        <span>Apakah SAVE cocok untuk pemula?</span>
+                        <span class="transition accordion-icon">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Ya, selama kamu punya skill dasar apa pun yang pernah kamu pakai dalam konteks nyata.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                        <span>Berapa lama saya butuh waktu untuk belajar SAVE?</span>
+                        <span class="transition accordion-icon">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Tidak lama. Sistemnya dibuat ringkas agar bisa dipelajari dan dipraktekkan sambil kerja.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                        <span>Apakah SAVE menjamin penghasilan?</span>
+                        <span class="transition accordion-icon">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Tidak. Yang SAVE berikan adalah arah & sistem. Hasil tetap bergantung eksekusi kamu.
+                    </div>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                        <span>Apa bonus untuk Batch 1?</span>
+                        <span class="transition accordion-icon">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Bonus eksklusif: <strong>15 Mini-Case Simulasi SAVE lintas profesi menggunakan 5 Model AI.</strong>. Hanya untuk 100 Founding User.
+                    </div>
+                </details>
+
+                <!-- FAQ 7 -->
+                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                        <span>Apakah ada refund?</span>
+                        <span class="transition accordion-icon">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Tidak ada, karena ini produk digital yang langsung dapat diakses. Pastikan membaca detail sebelum membeli.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: ABOUT CREATOR -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <div class="w-20 h-20 mx-auto bg-slate-200 rounded-full mb-6 overflow-hidden">
+                <img src="assets/profile.jpeg" alt="Dika Prananda Putra" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Dika Prananda Putra</h3>
+            <p class="text-brand-600 text-sm font-medium mb-4">Creator SAVE Blueprint</p>
+            <p class="text-slate-600 mb-6 text-sm">
+                IT Professional & Solo Creator dengan 13+ tahun pengalaman. Membantu profesional membangun aset digital tanpa mengganggu karir utama.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="https://instagram.com/dikapputra.id" target="blank" class="text-slate-400 hover:text-brand-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="mailto:dikapputra@gmail.com" class="text-slate-400 hover:text-brand-600 transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+
+                <!-- <a href="https://tiktok.com/@dikapputra.id" target="blank" class="text-slate-400 hover:text-brand-600 transition"><i data-lucide="tiktok" class="w-5 h-5"></i></a>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-white border-t border-slate-200 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-slate-500 text-sm font-medium">© 2025 SAVE Blueprint. All rights reserved.</p>
+            <p class="text-slate-500 text-xs mt-2">
+                Created by Dika Prananda Putra <br class="sm:hidden">
+                <span class="hidden sm:inline mx-2">•</span>
+                Published under CV Prananda Kreasi Nusantara
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // SMART PHASE COUNTDOWN TIMER LOGIC
+        const startDate = new Date("Dec 10, 2025 00:00:00").getTime();
+        const endDate = new Date("Dec 20, 2025 23:59:59").getTime(); // End of the 20th
+        
+        const labelEl = document.getElementById("countdown-label");
+        const containerEl = document.getElementById("countdown-container");
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            let targetDate;
+            let labelText;
+            let isClosed = false;
+
+            // LOGIC:
+            // If Now < Dec 10: Count down to Start (Launch)
+            // If Now >= Dec 10 AND < Dec 20: Count down to End (Close)
+            // If Now > Dec 20: Show Closed
+            
+            if (now < startDate) {
+                targetDate = startDate;
+                labelText = "Batch 1 Dibuka Dalam:";
+                labelEl.className = "text-xs font-bold text-brand-600 uppercase tracking-widest mb-3";
+            } else if (now < endDate) {
+                targetDate = endDate;
+                labelText = "⚠️ Pendaftaran Ditutup Dalam:";
+                labelEl.className = "text-xs font-bold text-accent-red uppercase tracking-widest mb-3 animate-pulse-fast";
+            } else {
+                isClosed = true;
+            }
+
+            if (isClosed) {
+                containerEl.innerHTML = "<div class='text-slate-400 font-bold text-xl py-4'>PENDAFTARAN BATCH 1 SUDAH DITUTUP</div>";
+                labelEl.innerText = "";
+                return;
+            }
+
+            labelEl.innerText = labelText;
+
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        // Update immediately then every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
