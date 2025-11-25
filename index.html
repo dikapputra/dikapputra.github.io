@@ -9,30 +9,30 @@
       gtag('js', new Date());
 
       gtag('config', 'G-R5RGBWWLDS');
-    </script>
+  </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVE Blueprint - Bangun Aset Digital Pertamamu</title>
-    
-    <!-- Link ke Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Tailwind CSS via CDN (Untuk Utility Classes Layout) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAVE Blueprint - Bangun Aset Digital Pertamamu</title>
 
-    <!-- Konfigurasi Warna Tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
+  <!-- Link ke Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS via CDN (Untuk Utility Classes Layout) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Konfigurasi Warna Tailwind -->
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: {
+                        50: '#eff6ff',
+                        100: '#dbeafe',
                             600: '#2563eb', // Primary Blue
                             700: '#1d4ed8',
                             900: '#1e3a8a',
@@ -80,7 +80,7 @@
     <!-- SECTION 0: HERO -->
     <header class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-brand-50 to-white relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            
+
             <!-- DYNAMIC COUNTDOWN TIMER -->
             <div class="mb-8 flex flex-col items-center justify-center">
                 <p id="countdown-label" class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-3">Batch 1 Dibuka Dalam:</p>
@@ -200,7 +200,7 @@
                         </li>
                     </ul>
                     <p class="mb-6">
-                        Dunia bergerak cepat. Kompetisi makin tinggi. Kalau kamu tidak punya sistem, kamu mudah stuck.</p>
+                    Dunia bergerak cepat. Kompetisi makin tinggi. Kalau kamu tidak punya sistem, kamu mudah stuck.</p>
                     <div class="bg-brand-50 border-l-4 border-brand-600 p-4 rounded-r-lg">
                         <p class="font-medium text-brand-900 italic">
                             “Skill solves everything… if you know where it goes.”
@@ -360,7 +360,7 @@
                                     <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-amber-200">
                                         Eksklusif Batch 1
                                     </span>
-                                    <span class="text-xs text-amber-700 font-semibold line-through decoration-red-500/70">Rp 120.000</span>
+                                    <!--span class="text-xs text-amber-700 font-semibold line-through decoration-red-500/70">Rp 120.000</span-->
                                     <span class="text-xs text-green-700 font-bold bg-green-100 px-2 py-0.5 rounded border border-green-200">GRATIS</span>
                                 </div>
 
@@ -368,13 +368,13 @@
                                     <i data-lucide="gift" class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0"></i>
                                     SAVE Simulation Pack
                                 </h4>
-                                
+                                <span class="text-xs text-amber-700 font-semibold line-through decoration-red-500/70">Rp 199.000</span><br>
                                 <p class="text-sm text-slate-700 font-medium mb-4 leading-snug">
                                     15 Simulasi Arah Skill (5 Persona × 3 Skill-Direction) dieksekusi menggunakan 5 Model AI.
                                 </p>
 
                                 <!-- Bonus Features List -->
-                                <ul class="space-y-2 mb-4">
+                                <!--ul class="space-y-2 mb-4">
                                     <li class="flex items-start gap-2 text-xs text-slate-600">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 mt-0.5"></i>
                                         <span>15 simulasi arah skill nyata (bukan teori)</span>
@@ -387,7 +387,16 @@
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 mt-0.5"></i>
                                         <span>Cover 5 Persona: Karyawan, Generalis, Kreator, dll.</span>
                                     </li>
-                                </ul>
+                                </ul-->
+
+                                <h4 class="text-lg font-bold text-slate-900 mb-1 flex items-start gap-2">
+                                    <i data-lucide="gift" class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0"></i>
+                                    Private Telegram Group
+                                </h4>
+                                <span class="text-xs text-amber-700 font-semibold line-through decoration-red-500/70 mb-2">Rp 149.000</span>
+                                <p class="text-sm text-slate-700 font-medium mb-4 leading-snug">
+                                    Ruang diskusi progres, insight eksekusi, dan pendampingan ringan. Grup dibuka khusus untuk Batch 1 setelah masa penjualan selesai.
+                                </p>
 
                                 <!-- Scarcity Note -->
                                 <div class="bg-white/60 p-3 rounded-lg border border-amber-100">
@@ -407,10 +416,16 @@
                         </div>
 
                         <p class="text-l justify-center font-bold text-slate-600 mb-1 ">DAPATKAN AKSES LIFETIME</p>
-                        <h3 class="text-l justify-center font-bold text-slate-600 mb-4 ">TOTAL VALUE SENILAI: <span class="text-green-700 font-bold bg-green-100 px-2 py-0.5 rounded border border-green-200">Rp 1.115.000</span></h3>
+                        <h3 class="text-l justify-center font-bold text-slate-600 mb-4 ">TOTAL VALUE SENILAI: <br><br><span class="text-green-700 text-2xl font-bold bg-green-100 px-2 py-0.5 rounded border border-green-200">Rp 1.343.000</span></h3>
                         <br>
-                        <p class="text-2xl font-extrabold text-slate-900  uppercase tracking-wider">Batch 1</p>
-                        <span class="text-md text-amber-700 font-semibold mb-6 uppercase">Harga Eksklusif hanya 10 hari</span>
+
+                        <p class="text-2xl font-extrabold text-slate-900 mb-2 uppercase ">Harga Eksklusif Batch 1</p>
+                        <p class="bg-amber-100 text-amber-800 text-[12px] font-bold px-3 py-1 rounded uppercase border border-amber-200 mb-3">
+                                        Hanya 100 copy
+                                        
+                                    </p>
+
+                        <!--span class="text-sm text-red-800 font-semibold mb-6">10 Desember 2025 — 10:00 WIB s/d <br>20 Desember 2025 — 23:00 WIB</span-->
                         <!--h1 class="text-slate-600 font-large mb-2">DAPATKAN AKSES LIFETIME: <br>Founding User Batch 1</h1-->
 
                         <!-- Price Stack/Ladder -->
@@ -441,7 +456,7 @@
                         <!-- ENHANCED SLOT COUNTER WIDGET -->
                         <div class="mb-6 text-left bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-inner">
                             <div class="flex justify-between items-end mb-2">
-                                <span class="text-xs font-bold text-slate-600 uppercase">⚡ Ketersediaan Kuota</span>
+                                <span class="text-xs font-bold text-slate-600 uppercase">⚡ Ketersediaan</span>
                                 <span class="text-xs font-bold text-accent-red">Tersisa 100 dari 100</span>
                             </div>
                             <div class="w-full bg-slate-200 rounded-full h-4 overflow-hidden border border-slate-300">
@@ -451,11 +466,12 @@
                             <!--<p class="text-[10px] text-slate-400 mt-2 text-center italic">Slot berkurang cepat hari ini.</p>-->
 
                             <p class="text-[10px] text-slate-500 mt-2 text-center italic text-accent-red animate-pulse-fast uppercase">Belum dimulai.</p>
-                        </div>
+                        </div><span class="text-xs text-green-700 font-bold bg-green-100 px-3 py-2 rounded border border-green-200 uppercase mb-5">tersedia pada: <br><br>
+                                        10 Desember 2025 — 10:00 WIB s/d <br>20 Desember 2025 — 23:00 WIB<br></span>
 
-                        <button onclick="alert('Tersedia mulai tanggal 10 Desember 2025')" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-200 transition transform hover:-translate-y-1 mb-4">
+                        <button onclick="alert('Batch 1 tersedia mulai tanggal 10 Desember 2025 pukul 10:00 WIB s/d 20 Desember 2025 pukul 23:00 WIB')" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-200 transition transform hover:-translate-y-1 mb-4">
 
-                            <i data-lucide="shopping-cart" class="inline-flex w-5 h-5"></i>  TERSEDIA 10 DESEMBER 2025
+                            <i data-lucide="shopping-cart" class="inline-flex w-5 h-5"></i>  BELUM TERSEDIA
                         </button>
                         
                         <!--div class="text-sm text-slate-400 space-y-1">
@@ -479,7 +495,7 @@
     <!-- SECTION 6: LEAD MAGNET (The Downsell) -->
     <section id="lead-magnet" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-3xl mx-auto px-4 text-center">
-            
+
             <!-- Soft Headline -->
             <h2 class="text-xl md:text-2xl font-semibold text-slate-700 mb-4">
                 Belum siap mengambil SAVE Blueprint?
@@ -492,13 +508,13 @@
             <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col md:flex-row items-center gap-8 text-left max-w-2xl mx-auto">
                 <!-- Mockup Image -->
 
-<div class="w-32 h-40 md:w-40 md:h-52 rounded-lg overflow-hidden border border-slate-200 shadow-inner">
-    <img 
-        src="assets/clarity-guide.png"
-        alt="SAVE Clarity Guide"
-        class="w-full h-full object-cover"
-    >
-</div>
+                <div class="w-32 h-40 md:w-40 md:h-52 rounded-lg overflow-hidden border border-slate-200 shadow-inner">
+                    <img 
+                    src="assets/clarity-guide.png"
+                    alt="SAVE Clarity Guide"
+                    class="w-full h-full object-cover"
+                    >
+                </div>
 
                 <!--<div class="w-32 h-40 md:w-40 md:h-52 bg-slate-100 rounded-lg flex-shrink-0 flex items-center justify-center border border-slate-200 shadow-inner">
                     <div class="text-center p-2">
@@ -513,183 +529,191 @@
                     <div class="inline-block bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded mb-2">GRATIS</div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">SAVE Clarity Guide</h3>
                     <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                        Panduan 15 halaman untuk melihat skillmu lebih jernih, mengenali audience potensial, dan mengurangi rasa bingung sebelum membuat entry.
+                        Panduan 10 halaman untuk melihat skillmu lebih jernih, mengenali audience potensial, dan mengurangi rasa bingung sebelum membuat entry.
                     </p>
-
-                    
                     
                     <!-- Secondary CTA -->
-                    <button onclick="alert('Tersedia mulai tanggal 25 November 2025')" class="inline-flex items-center gap-2 px-6 py-2.5 bg-white border-2 border-slate-200 hover:border-brand-600 text-slate-700 hover:text-brand-600 rounded-lg font-semibold transition duration-200">
+                    <!--button onclick="alert('Tersedia mulai tanggal 25 November 2025')" class="inline-flex items-center gap-2 px-6 py-2.5 bg-white border-2 border-slate-200 hover:border-brand-600 text-slate-700 hover:text-brand-600 rounded-lg font-semibold transition duration-200">
                         <i data-lucide="download" class="w-4 h-4"></i>
-                        TERSEDIA 25 NOVEMBER 2025
-                    </button>
+                        DOWNLOAD GRATIS
+                    </button-->
+
+                    <a href="http://lynk.id/dikapputra.id/x85512dd5xk0" 
+                    target="_blank"
+                    class="inline-flex items-center gap-2 px-6 py-2.5 bg-white border-2 border-slate-200 hover:border-brand-600 text-slate-700 hover:text-brand-600 rounded-lg font-semibold transition duration-200">
+
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    DOWNLOAD GRATIS
+                </a>
+            </div>
+        </div>
+
+        <!-- Why Clarity Guide Exists -->
+        <div class="mt-12 max-w-xl mx-auto">
+            <p class="text-md text-slate-500 italic">
+                "Clarity Guide membantu kamu memahami modal yang sudah kamu punya, sebelum masuk ke sistem lengkap SAVE Blueprint."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION: FAQ -->
+<section id="faq" class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-3xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900">FAQ</h2>
+            <p class="text-slate-500 mt-2">Pertanyaan yang paling sering diajukan.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                    <span>Apa bedanya SAVE Clarity Guide dan SAVE Blueprint?</span>
+                    <span class="transition accordion-icon">
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                    </span>
+                </summary>
+                <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Clarity Guide = gambaran awal.<br>
+                    SAVE Blueprint = sistem lengkap untuk membangun penghasilan dari skill yang sudah kamu punya.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                    <span>SAVE cocok untuk siapa?</span>
+                    <span class="transition accordion-icon">
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                    </span>
+                </summary>
+                <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Untuk kamu yang:
+                    <ul class="list-disc list-inside mt-2 space-y-1 pl-2">
+                        <li>Punya skill tapi bingung arahnya</li>
+                        <li>Ingin menghasilkan dari skill yang sudah ada</li>
+                        <li>Bekerja full-time & waktu luangnya terbatas</li>
+                        <li>Butuh arah sebelum membuat entry atau produk</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                    <span>Apakah SAVE cocok untuk pemula?</span>
+                    <span class="transition accordion-icon">
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                    </span>
+                </summary>
+                <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Ya, selama kamu punya skill dasar apa pun yang pernah kamu pakai dalam konteks nyata.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                    <span>Berapa lama saya butuh waktu untuk belajar SAVE?</span>
+                    <span class="transition accordion-icon">
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                    </span>
+                </summary>
+                <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Tidak lama. Sistemnya dibuat ringkas agar bisa dipelajari dan dipraktekkan sambil kerja.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                    <span>Apakah SAVE menjamin penghasilan?</span>
+                    <span class="transition accordion-icon">
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                    </span>
+                </summary>
+                <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Tidak. Yang SAVE berikan adalah arah & sistem. Hasil tetap bergantung eksekusi kamu.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
+                    <span>Apakah ada refund?</span>
+                    <span class="transition accordion-icon">
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+                    </span>
+                </summary>
+                <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                    Tidak ada, karena ini produk digital yang langsung dapat diakses. Pastikan membaca detail sebelum membeli.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 7: ABOUT CREATOR -->
+<section class="py-20 bg-slate-50">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+        <div class="w-20 h-20 mx-auto bg-slate-200 rounded-full mb-6 overflow-hidden">
+            <img src="assets/profile.jpeg" alt="Dika Prananda Putra" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">Dika Prananda Putra</h3>
+        <p class="text-brand-600 text-sm font-medium mb-3">Creator SAVE Blueprint</p>
+        <p class="text-slate-600 mb-6 text-sm justify-center">
+            Lulusan terbaik Sistem Informasi. <br>13+ tahun pengalaman di dunia kerja profesional, freelance, dan membangun bisnis.</p>
+            <p class="text-slate-600 mb-6 text-sm text-justify">
+                Saya menghabiskan lebih dari satu dekade bekerja di lingkungan korporat sambil membangun penghasilan sampingan dari skill yang saya punya.
+            Selama perjalanan itu, saya menyadari satu hal yang dialami banyak orang: Mereka punya skill… tapi tidak punya arah.</p>
+            <p class="text-slate-600 mb-6 text-sm text-justify">
+                SAVE Blueprint lahir dari pengalaman itu. <br>Sebuah sistem 4 langkah yang saya bangun — bukan dari teori — tapi dari puluhan kegagalan, perbaikan, dan pembelajaran selama 13+ tahun.
+                <p class="text-slate-600 mb-6 text-sm text-justify">
+                    Misi saya sederhana: membantu karyawan sibuk dan pekerja profesional melihat skill mereka sebagai modal yang bisa menghasilkan, tanpa harus resign atau burnout.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="https://instagram.com/dikapputra.id" target="blank" class="text-slate-400 hover:text-brand-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+
+                    <a href="https://www.tiktok.com/@dikapputra.id" target="blank" class="text-slate-400 hover:text-brand-600 transition" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music-2"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dikapputra/" target="blank" class="text-slate-400 hover:text-brand-600 transition" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+
+                    <a href="mailto:dikapputra@gmail.com" target="blank" class="text-slate-400 hover:text-brand-600 transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
                 </div>
             </div>
+        </section>
 
-            <!-- Why Clarity Guide Exists -->
-            <div class="mt-12 max-w-xl mx-auto">
-                <p class="text-md text-slate-500 italic">
-                    "Clarity Guide membantu kamu memahami modal yang sudah kamu punya, sebelum masuk ke sistem lengkap SAVE Blueprint."
+        <!-- FOOTER -->
+        <footer class="py-8 bg-white border-t border-slate-200 text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <p class="text-slate-500 text-sm font-medium"><strong>© 2025 Dika Prananda Putra. All rights reserved.</strong></p>
+                <p class="text-slate-500 text-xs mt-1">
+                    SAVE Blueprint™ adalah bagian dari SAVE Ecosystem dan diterbitkan oleh CV Prananda Kreasi Nusantara.
                 </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION: FAQ -->
-    <section id="faq" class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-3xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">FAQ</h2>
-                <p class="text-slate-500 mt-2">Pertanyaan yang paling sering diajukan.</p>
-            </div>
+                <br>
+                <p class="text-slate-500 text-sm mt-2 text-center uppercase font-bold">
+                    <a href="#">Terms & Privacy Policy.</a></p><br>
+                    <p class="text-slate-500 text-sm mt-2 text-center uppercase font-bold">Disclaimer.</p>
+                    <p class="text-slate-500 text-xs mt-1 text-justify">
+                        SAVE Blueprint dirancang untuk membantu individu membangun arah dan strategi penghasilan dari skill yang sudah dimiliki.
+                        Hasil setiap individu dapat berbeda-beda, dipengaruhi oleh banyak faktor seperti latar belakang, kondisi kerja, pengalaman, kapasitas belajar, serta konsistensi dalam menjalankan proses. 
+                        SAVE memberikan sistem dan struktur, namun progres tetap membutuhkan tindakan nyata.
+                        Jika Anda mencari hasil instan atau tidak siap menjalankan proses secara bertahap, program ini tidak cocok untuk Anda..
+                    </p>
+                </div>
+            </footer>
 
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
-                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
-                        <span>Apa bedanya SAVE Clarity Guide dan SAVE Blueprint?</span>
-                        <span class="transition accordion-icon">
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
-                        </span>
-                    </summary>
-                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                        Clarity Guide = gambaran awal.<br>
-                        SAVE Blueprint = sistem lengkap untuk membangun penghasilan dari skill yang sudah kamu punya.
-                    </div>
-                </details>
-
-                <!-- FAQ 2 -->
-                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
-                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
-                        <span>SAVE cocok untuk siapa?</span>
-                        <span class="transition accordion-icon">
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
-                        </span>
-                    </summary>
-                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                        Untuk kamu yang:
-                        <ul class="list-disc list-inside mt-2 space-y-1 pl-2">
-                            <li>Punya skill tapi bingung arahnya</li>
-                            <li>Ingin menghasilkan dari skill yang sudah ada</li>
-                            <li>Bekerja full-time & waktu luangnya terbatas</li>
-                            <li>Butuh arah sebelum membuat entry atau produk</li>
-                        </ul>
-                    </div>
-                </details>
-
-                <!-- FAQ 3 -->
-                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
-                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
-                        <span>Apakah SAVE cocok untuk pemula?</span>
-                        <span class="transition accordion-icon">
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
-                        </span>
-                    </summary>
-                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                        Ya, selama kamu punya skill dasar apa pun yang pernah kamu pakai dalam konteks nyata.
-                    </div>
-                </details>
-
-                <!-- FAQ 4 -->
-                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
-                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
-                        <span>Berapa lama saya butuh waktu untuk belajar SAVE?</span>
-                        <span class="transition accordion-icon">
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
-                        </span>
-                    </summary>
-                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                        Tidak lama. Sistemnya dibuat ringkas agar bisa dipelajari dan dipraktekkan sambil kerja.
-                    </div>
-                </details>
-
-                <!-- FAQ 5 -->
-                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
-                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
-                        <span>Apakah SAVE menjamin penghasilan?</span>
-                        <span class="transition accordion-icon">
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
-                        </span>
-                    </summary>
-                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                        Tidak. Yang SAVE berikan adalah arah & sistem. Hasil tetap bergantung eksekusi kamu.
-                    </div>
-                </details>
-
-                <!-- FAQ 6 -->
-                <details class="group bg-slate-50 rounded-lg border border-slate-100 open:border-brand-200 transition-all duration-200">
-                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:text-brand-600">
-                        <span>Apakah ada refund?</span>
-                        <span class="transition accordion-icon">
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
-                        </span>
-                    </summary>
-                    <div class="text-slate-600 px-5 pb-5 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                        Tidak ada, karena ini produk digital yang langsung dapat diakses. Pastikan membaca detail sebelum membeli.
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 7: ABOUT CREATOR -->
-    <section class="py-20 bg-slate-50">
-        <div class="max-w-2xl mx-auto px-4 text-center">
-            <div class="w-20 h-20 mx-auto bg-slate-200 rounded-full mb-6 overflow-hidden">
-                <img src="assets/profile.jpeg" alt="Dika Prananda Putra" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-slate-900">Dika Prananda Putra</h3>
-            <p class="text-brand-600 text-sm font-medium mb-4">Creator SAVE Blueprint</p>
-            <p class="text-slate-600 mb-6 text-sm">
-                Lulusan terbaik Sistem Informasi. 13+ tahun pengalaman sebagai praktisi di dunia kerja, freelance, dan bisnis. Pernah stuck, pernah burnout, pernah bingung cara menambah penghasilan.
-            </p>
-            <p class="text-slate-600 mb-6 text-sm">
-                SAVE adalah sistem yang saya bangun setelah 13 tahun trial & error, agar orang lain tidak harus mengulang proses panjang itu.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="https://instagram.com/dikapputra.id" target="blank" class="text-slate-400 hover:text-brand-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-
-                <a href="https://www.tiktok.com/@dikapputra.id" target="blank" class="text-slate-400 hover:text-brand-600 transition" aria-label="TikTok">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music-2"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/dikapputra/" target="blank" class="text-slate-400 hover:text-brand-600 transition" aria-label="LinkedIn">
-                    <i data-lucide="linkedin" class="w-5 h-5"></i>
-                </a>
-
-                <a href="mailto:dikapputra@gmail.com" target="blank" class="text-slate-400 hover:text-brand-600 transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-8 bg-white border-t border-slate-200 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <p class="text-slate-500 text-sm font-medium">© 2025 Dika Prananda Putra. All rights reserved.</p>
-            <p class="text-slate-500 text-xs mt-1">
-            SAVE Blueprint™ adalah bagian dari SAVE Ecosystem dan diterbitkan oleh CV Prananda Kreasi Nusantara.
-            </p>
-
-            <br>
-            <p class="text-slate-500 text-xs mt-2 text-center">
-                <a href="#"><strong>Terms & Privacy Policy.</strong></span></a>
-            </p>
-            <br>
-
-            <p class="text-slate-500 text-xs mt-2 text-justify">
-                <strong>DISCLAIMER.</strong> SAVE Blueprint dirancang untuk membantu individu membangun arah dan strategi penghasilan dari skill yang sudah dimiliki.
-                Hasil setiap individu dapat berbeda-beda, dipengaruhi oleh banyak faktor seperti latar belakang, kondisi kerja, pengalaman, kapasitas belajar, serta konsistensi dalam menjalankan proses. 
-                SAVE memberikan sistem dan struktur, namun progres tetap membutuhkan tindakan nyata.
-                Jika Anda mencari hasil instan atau tidak siap menjalankan proses secara bertahap, <span class="uppercase">program ini tidak cocok untuk Anda.</span>
-            </p>
-        </div>
-    </footer>
-
-    <script>
+            <script>
         // Initialize Lucide Icons
-        lucide.createIcons();
+                lucide.createIcons();
 
         // SMART PHASE COUNTDOWN TIMER LOGIC
-        const startDate = new Date("Dec 10, 2025 00:00:00").getTime();
+                const startDate = new Date("Dec 10, 2025 00:00:00").getTime();
         const endDate = new Date("Dec 20, 2025 23:59:59").getTime(); // End of the 20th
         
         const labelEl = document.getElementById("countdown-label");
