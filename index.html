@@ -423,9 +423,9 @@
 
                         <p class="text-2xl font-extrabold text-slate-900 mb-2 uppercase ">Harga Eksklusif Batch 1</p>
                         <p class="bg-amber-100 text-amber-800 text-[12px] font-bold px-3 py-1 rounded uppercase border border-amber-200 mb-3">
-                                        Hanya 100 copy
-                                        
-                                    </p>
+                            Hanya 100 copy
+                            
+                        </p>
 
                         <!--span class="text-sm text-red-800 font-semibold mb-6">10 Desember 2025 — 10:00 WIB s/d <br>20 Desember 2025 — 23:00 WIB</span-->
                         <!--h1 class="text-slate-600 font-large mb-2">DAPATKAN AKSES LIFETIME: <br>Founding User Batch 1</h1-->
@@ -469,13 +469,13 @@
 
                             <p class="text-[10px] text-slate-500 mt-2 text-center italic text-accent-red animate-pulse-fast uppercase">Belum dimulai.</p>
                         </div><span class="text-xs text-green-700 font-bold bg-green-100 px-3 py-2 rounded border border-green-200 uppercase mb-5">tersedia pada: <br><br>
-                                        10 Desember 2025 — 10:00 WIB s/d <br>20 Desember 2025 — 23:00 WIB<br></span>
+                            10 Desember 2025 — 10:00 WIB s/d <br>20 Desember 2025 — 23:00 WIB<br></span>
 
-                        <button onclick="alert('Batch 1 tersedia mulai tanggal 10 Desember 2025 pukul 10:00 WIB s/d 20 Desember 2025 pukul 23:00 WIB')" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-200 transition transform hover:-translate-y-1 mb-4">
+                            <button onclick="alert('Batch 1 tersedia mulai tanggal 10 Desember 2025 pukul 10:00 WIB s/d 20 Desember 2025 pukul 23:00 WIB')" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-200 transition transform hover:-translate-y-1 mb-4">
 
-                            <i data-lucide="shopping-cart" class="inline-flex w-5 h-5"></i>  BELUM TERSEDIA
-                        </button>
-                        
+                                <i data-lucide="shopping-cart" class="inline-flex w-5 h-5"></i>  BELUM TERSEDIA
+                            </button>
+                            
                         <!--div class="text-sm text-slate-400 space-y-1">
                             <p><br>📅 Tersedia hanya 10 hari,<br> mulai 10 Desember 2025</p>
                         </div-->
@@ -711,63 +711,72 @@
             </footer>
 
             <script>
-        // Initialize Lucide Icons
+    // Initialize Lucide Icons
                 lucide.createIcons();
 
-        // SMART PHASE COUNTDOWN TIMER LOGIC
-                const startDate = new Date("Dec 10, 2025 10:00:00").getTime();
-        const endDate = new Date("Dec 20, 2025 23:59:59").getTime(); // End of the 20th
-        
-        const labelEl = document.getElementById("countdown-label");
-        const containerEl = document.getElementById("countdown-container");
+    // --- TIMEZONE FIX: Asia/Jakarta ---
+                function getJakartaTime() {
+                    return new Date(
+                        new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
+                        ).getTime();
+                }
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            let targetDate;
-            let labelText;
-            let isClosed = false;
+                function jakartaDate(str) {
+                    return new Date(
+                        new Date(str).toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
+                        ).getTime();
+                }
+    // ----------------------------------
 
-            // LOGIC:
-            // If Now < Dec 10: Count down to Start (Launch)
-            // If Now >= Dec 10 AND < Dec 20: Count down to End (Close)
-            // If Now > Dec 20: Show Closed
-            
-            if (now < startDate) {
-                targetDate = startDate;
-                labelText = "Batch 1 Dibuka Dalam:";
-                labelEl.className = "text-xs font-bold text-brand-600 uppercase tracking-widest mb-3";
-            } else if (now < endDate) {
-                targetDate = endDate;
-                labelText = "⚠️ Pendaftaran Ditutup Dalam:";
-                labelEl.className = "text-xs font-bold text-accent-red uppercase tracking-widest mb-3 animate-pulse-fast";
-            } else {
-                isClosed = true;
-            }
+    // SMART PHASE COUNTDOWN TIMER LOGIC
+                const startDate = jakartaDate("Dec 10, 2025 10:00:00");
+                const endDate   = jakartaDate("Dec 20, 2025 23:59:59");
 
-            if (isClosed) {
-                containerEl.innerHTML = "<div class='text-slate-400 font-bold text-xl py-4'>PENDAFTARAN BATCH 1 SUDAH DITUTUP</div>";
-                labelEl.innerText = "";
-                return;
-            }
+                const labelEl = document.getElementById("countdown-label");
+                const containerEl = document.getElementById("countdown-container");
 
-            labelEl.innerText = labelText;
+                function updateCountdown() {
+        const now = getJakartaTime(); // <== GMT+7 enforced
 
-            const distance = targetDate - now;
+        let targetDate;
+        let labelText;
+        let isClosed = false;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        if (now < startDate) {
+            targetDate = startDate;
+            labelText = "Batch 1 Dibuka Dalam:";
+            labelEl.className = "text-xs font-bold text-brand-600 uppercase tracking-widest mb-3";
+        } else if (now < endDate) {
+            targetDate = endDate;
+            labelText = "⚠️ Pendaftaran Ditutup Dalam:";
+            labelEl.className = "text-xs font-bold text-accent-red uppercase tracking-widest mb-3 animate-pulse-fast";
+        } else {
+            isClosed = true;
         }
 
-        // Update immediately then every second
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
+        if (isClosed) {
+            containerEl.innerHTML = "<div class='text-slate-400 font-bold text-xl py-4'>PENDAFTARAN BATCH 1 SUDAH DITUTUP</div>";
+            labelEl.innerText = "";
+            return;
+        }
+
+        labelEl.innerText = labelText;
+
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = String(days).padStart(2, '0');
+        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
