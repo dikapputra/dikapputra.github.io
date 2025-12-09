@@ -84,7 +84,7 @@
 
             <!-- DYNAMIC COUNTDOWN TIMER -->
             <div class="mb-8 flex flex-col items-center justify-center">
-                <p id="countdown-label" class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-3">Batch 1 Dibuka Dalam:</p>
+                <p id="countdown-label" class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-3">Batch 1 Berakhir dalam</p>
                 <div id="countdown-container" class="flex flex-wrap justify-center gap-3 md:gap-4 text-slate-800">
                     <div class="countdown-box flex flex-col items-center p-3 rounded-xl min-w-[70px] shadow-sm">
                         <span class="text-2xl md:text-3xl font-bold font-mono text-brand-900" id="days">00</span>
@@ -320,7 +320,19 @@
                     <div class="p-8 md:p-10 bg-slate-50">
                         <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase  text-center">Apa yang kamu dapatkan?</h2>
                         <!--h3 class="text-l justify-center font-bold text-slate-900 mb-4 ">TOTAL VALUE SENILAI: <span class="text-green-700 font-bold bg-green-100 px-2 py-0.5 rounded border border-green-200">Rp 1.115.000</span></h3-->
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
 
+    <!-- COVER SAVE BLUEPRINT -->
+    <div class="w-100 h-60 md:w-60 md:h-100 rounded-lg overflow-hidden border border-slate-200 shadow-inner bg-white">
+        <img 
+            src="assets/cover-product.png"
+            alt="SAVE Blueprint"
+            class="w-full h-full object-cover"
+        >
+    </div>
+
+
+</div>
                         <ul class="mb-8">
                             <li class="flex items-center gap-3 text-sm font-medium text-slate-700 mb-1">
                                 <i data-lucide="book" class="w-5 h-5 text-brand-600 "></i>
@@ -354,7 +366,7 @@
 
                                         <li class="flex items-center gap-3 text-sm font-medium text-slate-700 mb-1">
                                             <i data-lucide="book-open" class="w-5 h-5 text-brand-600 "></i>
-                                            <span class="font-bold text-xl">SAVE Mini-Guide</span>
+                                            <span class="font-bold text-xl">SAVE Mini-G uide</span>
                                         </li>
                                         <li class="text-[15px]">
                                             <p class="text-xs text-blue-600 mb-1">  PDF
@@ -475,6 +487,7 @@
                         <br>
 
                         <p class="text-2xl font-extrabold text-slate-900 mb-2 uppercase ">Harga Eksklusif<br> Batch 1</p>
+
                         
 
                         <!--span class="text-sm text-red-800 font-semibold mb-6">10 Desember 2025 — 10:00 WIB s/d <br>20 Desember 2025 — 23:00 WIB</span-->
@@ -516,15 +529,17 @@
                             </div>
                             <!--<p class="text-[10px] text-slate-400 mt-2 text-center italic">Slot berkurang cepat hari ini.</p>-->
 
-                            <p class="text-[10px] text-slate-500 mt-2 text-center italic text-accent-red animate-pulse-fast uppercase">Belum dimulai.</p>
-                        </div><span class="text-md text-green-700 font-bold bg-green-100 px-3 py-2 rounded border border-green-200 uppercase mb-5">tersedia pada: <br><br>
-                            10 Desember 2025 — 10:00 WIB s/d <br>20 Desember 2025 — 23:00 WIB<br></span>
+                            <p class="text-[10px] text-slate-500 mt-2 text-center italic text-accent-red animate-pulse-fast uppercase">Beli sekarang sebelum kehabisan.</p>
+                        </div>
 
-                            <button onclick="alert('Batch 1 tersedia mulai tanggal 10 Desember 2025 pukul 10:00 WIB s/d 20 Desember 2025 pukul 23:00 WIB')" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-200 transition transform hover:-translate-y-1 mb-4">
+                        <a href="http://lynk.id/dikapputra.id/norzdqvk3lzv/checkout" 
+                            target="_blank"
+                            class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-200 transition transform hover:-translate-y-1 mb-4 inline-flex items-center justify-center gap-2">
 
-                                <i data-lucide="shopping-cart" class="inline-flex w-5 h-5"></i>  BELUM TERSEDIA
-                            </button>
-                            
+                            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            BELI SEKARANG
+                        </a>
+
                         <!--div class="text-sm text-slate-400 space-y-1">
                             <p><br>📅 Tersedia hanya 10 hari,<br> mulai 10 Desember 2025</p>
                         </div-->
@@ -588,7 +603,7 @@
                         DOWNLOAD GRATIS
                     </button-->
 
-                    <a href="http://lynk.id/dikapputra.id/x85512dd5xk0" 
+                    <a href="http://lynk.id/dikapputra.id/x85512dd5xk0/checkout" 
                     target="_blank"
                     class="inline-flex items-center gap-2 px-6 py-2.5 bg-white border-2 border-slate-200 hover:border-brand-600 text-slate-700 hover:text-brand-600 rounded-lg font-semibold transition duration-200">
 
@@ -759,72 +774,74 @@
             </footer>
 
             <script>
-    // Initialize Lucide Icons
-                lucide.createIcons();
+  // Initialize Lucide Icons
+  lucide.createIcons();
 
-    // --- TIMEZONE FIX: Asia/Jakarta ---
-                function getJakartaTime() {
-                    return new Date(
-                        new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
-                        ).getTime();
-                }
+  // --- TIMEZONE FIX: Asia/Jakarta ---
+  function getJakartaTime() {
+    return new Date(
+      new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
+    ).getTime();
+  }
 
-                function jakartaDate(str) {
-                    return new Date(
-                        new Date(str).toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
-                        ).getTime();
-                }
-    // ----------------------------------
+  function jakartaDate(str) {
+    return new Date(
+      new Date(str).toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
+    ).getTime();
+  }
+  // ----------------------------------
 
-    // SMART PHASE COUNTDOWN TIMER LOGIC
-                const startDate = jakartaDate("Dec 10, 2025 10:00:00");
-                const endDate   = jakartaDate("Dec 20, 2025 23:59:59");
+  // TANGGAL PENTING
+  const startDate = jakartaDate("Dec 10, 2025 10:00:00"); // OPEN
+  const endDate   = jakartaDate("Dec 20, 2025 23:00:00"); // CLOSE
 
-                const labelEl = document.getElementById("countdown-label");
-                const containerEl = document.getElementById("countdown-container");
+  const labelEl = document.getElementById("countdown-label");
+  const containerEl = document.getElementById("countdown-container");
 
-                function updateCountdown() {
-        const now = getJakartaTime(); // <== GMT+7 enforced
+  function updateCountdown() {
+    const now = getJakartaTime();
 
-        let targetDate;
-        let labelText;
-        let isClosed = false;
+    let targetDate;
+    let labelText;
 
-        if (now < startDate) {
-            targetDate = startDate;
-            labelText = "Batch 1 Dibuka Dalam:";
-            labelEl.className = "text-xs font-bold text-brand-600 uppercase tracking-widest mb-3";
-        } else if (now < endDate) {
-            targetDate = endDate;
-            labelText = "⚠️ Pendaftaran Ditutup Dalam:";
-            labelEl.className = "text-xs font-bold text-accent-red uppercase tracking-widest mb-3 animate-pulse-fast";
-        } else {
-            isClosed = true;
-        }
-
-        if (isClosed) {
-            containerEl.innerHTML = "<div class='text-slate-400 font-bold text-xl py-4'>PENDAFTARAN BATCH 1 SUDAH DITUTUP</div>";
-            labelEl.innerText = "";
-            return;
-        }
-
-        labelEl.innerText = labelText;
-
-        const distance = targetDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("days").innerText = String(days).padStart(2, '0');
-        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    // 1. BELUM DIBUKA
+    if (now < startDate) {
+      targetDate = startDate;
+      labelText = "Batch 1 Dibuka Dalam:";
+      labelEl.className = "text-xs font-bold text-brand-600 uppercase tracking-widest mb-3";
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    // 2. SUDAH DIBUKA, MENUJU PENUTUPAN
+    else if (now >= startDate && now < endDate) {
+      targetDate = endDate;
+      labelText = "⚠️ Pendaftaran Ditutup Dalam:";
+      labelEl.className = "text-xs font-bold text-accent-red uppercase tracking-widest mb-3 animate-pulse-fast";
+    }
+
+    // 3. SUDAH DITUTUP
+    else {
+      containerEl.innerHTML = "<div class='text-slate-400 font-bold text-xl py-4'>PENDAFTARAN BATCH 1 SUDAH DITUTUP</div>";
+      labelEl.innerText = "";
+      return;
+    }
+
+    labelEl.innerText = labelText;
+
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
